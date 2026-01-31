@@ -1,2 +1,43 @@
 @import "_common";
 
+header {
+    top: 0;
+    z-index: 10;
+    padding: 12px 0;
+    position: sticky;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            button {
+                padding: 4px 10px;
+                border-radius: 6px;
+                background-color: transparent;
+                border: 1px solid #dcdcdc;
+            }
+        }
+
+        nav {
+            gap: 12px;
+            display: flex;
+            align-items: center;
+
+            a {
+                color: inherit;
+                padding: 4px 10px;
+                border-radius: 6px;
+                text-decoration: none;
+                border: 1px solid #dcdcdc;
+                background-color: transparent;
+            }
+        }
+    }
+}
