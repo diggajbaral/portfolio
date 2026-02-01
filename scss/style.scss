@@ -1,4 +1,19 @@
-@import "_common";
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap');
+
+$PrimeColor: #818cf8;
+$TextColor: #666687;
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Ropa Sans", sans-serif;
+}
+
+body {
+    margin-bottom: 30px;
+}
 
 header {
     top: 0;
@@ -20,8 +35,8 @@ header {
             button {
                 padding: 4px 10px;
                 border-radius: 6px;
-                background-color: transparent;
                 border: 1px solid #dcdcdc;
+                background-color: transparent;
             }
         }
 
@@ -37,6 +52,301 @@ header {
                 text-decoration: none;
                 border: 1px solid #dcdcdc;
                 background-color: transparent;
+            }
+        }
+    }
+}
+
+main {
+    .container {
+        .row {
+
+            .left {
+                top: 50px;
+                height: 100%;
+                position: sticky;
+                text-align: center;
+                user-select: none;
+
+                strong {
+                    font-size: 110px;
+                    color: #fff;
+                    -webkit-text-stroke: 2px #f1f1f1cd;
+                }
+            }
+
+            .center {
+
+                .profileHeader {
+                    margin-top: 12px;
+                    position: relative;
+
+                    .cover {
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 8px;
+                        aspect-ratio: 30 / 9;
+                    }
+
+                    .profile {
+                        right: 60px;
+                        bottom: -60px;
+                        position: absolute;
+
+                        width: 130px;
+                        height: 130px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        border: 5px solid #fff;
+                        background-color: $PrimeColor;
+                    }
+                }
+
+                .profileCaption {
+                    .username {
+                        color: $PrimeColor;
+                    }
+
+                    h1,
+                    h2 {
+                        font-size: 35px;
+                        font-weight: 900;
+                    }
+
+                    p {
+                        color: $TextColor;
+                        font-size: 18px;
+                    }
+
+                    a {
+                        color: $PrimeColor;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    ul {
+                        padding: 0;
+
+                        li {
+                            font-size: 18px;
+                            list-style: none;
+                            color: $TextColor;
+                            margin-bottom: 6px;
+
+                            &:last-child {
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                }
+
+                .socialMedia {
+                    gap: 12px;
+                    display: grid;
+                    padding-bottom: 16px;
+                    grid-template-columns: repeat(2, 1fr);
+
+                    a {
+                        width: 100%;
+                        color: #fff;
+                        border: none;
+                        padding: 8px 0;
+                        border-radius: 8px;
+                        text-align: center;
+                        text-decoration: none;
+
+                        &:nth-child(1) {
+                            background-color: $PrimeColor;
+                        }
+
+                        &:nth-child(2) {
+                            background-color: #0D1117;
+                        }
+                    }
+                }
+
+                .developedSkills {
+                    padding: 20px;
+                    border-radius: 8px;
+                    background-color: #F8FAFC;
+
+                    p {
+                        color: $TextColor;
+                    }
+
+                    strong {
+                        gap: 12px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        font-size: 18px;
+                    }
+                }
+
+                .tittle {
+                    margin: 16px 0;
+
+                    strong {
+                        font-size: 26px;
+                    }
+                }
+
+                .projects {
+
+
+                    .projectCard {
+                        margin-bottom: 26px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .projectHeader {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            figure {
+                                gap: 12px;
+                                margin: 0;
+                                display: flex;
+                                align-content: center;
+
+                                img {
+                                    width: 50px;
+                                    height: 50px;
+                                    object-fit: cover;
+                                    border-radius: 6px;
+                                    background-color: $PrimeColor;
+                                }
+
+                                figcaption {
+                                    a {
+                                        color: inherit;
+                                        text-decoration: none;
+
+                                        &:hover {
+                                            color: $PrimeColor;
+                                        }
+
+                                        strong {
+                                            font-size: 18px;
+                                        }
+
+                                    }
+
+                                    i {
+                                        color: green;
+                                        cursor: pointer;
+                                    }
+
+                                    p {
+                                        margin: 0;
+                                        color: $TextColor;
+                                    }
+                                }
+                            }
+
+                            .projectStatus {
+                                p {
+                                    margin: 0;
+                                    color: $TextColor;
+                                    text-align: right;
+                                }
+                            }
+                        }
+
+                        .projectNote {
+                            padding: 20px;
+                            margin-top: 12px;
+                            border-radius: 8px;
+                            background-color: #F8FAFC;
+
+                            a {
+                                color: $PrimeColor;
+                                text-decoration: none;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            p {
+                                margin-bottom: 6px;
+                                font-size: 18px;
+
+                            }
+
+                            strong {
+                                gap: 12px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin-top: 12px;
+                                color: #0D1117;
+                            }
+
+                            ul {
+                                margin: 0;
+
+                                li {
+                                    color: $TextColor;
+
+                                    &::marker {
+                                        color: $PrimeColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .mailCard {
+                    color: #fff;
+                    padding: 60px;
+                    font-size: 30px;
+                    text-align: center;
+                    border-radius: 8px;
+                    margin-top: 24px;
+                    background-color: #0D1117;
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+
+            }
+
+            .right {
+                top: 50px;
+                height: 100%;
+                position: sticky;
+                padding: 12px;
+
+                strong {
+                    font-size: 26px;
+                }
+
+                p {
+                    margin-bottom: 6px;
+                    font-size: 18px;
+                    color: $TextColor;
+                }
+
+                a {
+                    color: #000;
+                    border: none;
+                    padding: 8px 0;
+                    font-size: 18px;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    background-color: #ffdd00;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
         }
     }
