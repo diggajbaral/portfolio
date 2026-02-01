@@ -11,6 +11,25 @@ body {
   margin-bottom: 30px;
 }
 
+@media (max-width: 480px) {
+  main .container .row .center .profileHeader figure img {
+    aspect-ratio: 24/9 !important;
+  }
+  main .container .row .center .profileHeader .profile {
+    right: 30px !important;
+  }
+  main .container .row .center .mailCard {
+    padding: 30px !important;
+  }
+  main .container .row .right {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 991.2px) {
+  main .container .row .left {
+    display: none;
+  }
+}
 header {
   top: 0;
   z-index: 10;
